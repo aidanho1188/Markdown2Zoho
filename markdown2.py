@@ -199,7 +199,7 @@ def markdown(
     use_file_vars: bool = False,
     cli: bool = False
 ) -> 'UnicodeWithAttrs':
-    text = text.replace('\u00A0', ' ') # ? replace non-breaking space with regular space
+    text = text.replace('\u00A0', '&nbsp;') # ? replace non-breaking space with regular space
     return Markdown(html4tags=html4tags, tab_width=tab_width,
                     safe_mode=safe_mode, extras=extras,
                     link_patterns=link_patterns,

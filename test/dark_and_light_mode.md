@@ -37,7 +37,7 @@ Your work will result in:
 
 ### Create inline style objects
 
-- [ ]  We wil need two objects, `darkMode` and `lightMode` that contain styles within. `darkMode` should set the background color to black and the font color to white. `lightMode` should set the background color to white and the font color to black.
+- [ ]  We wil need two objects, `darkMode` and `lightMode` that contain styles within.&nbsp;`darkMode`&nbsp;should set the background color to black and the font color to white.&nbsp;`lightMode`&nbsp;should set the background color to white and the font color to black.
 
 ### Create the `styleMode` state
 

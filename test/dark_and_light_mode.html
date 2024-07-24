@@ -1,0 +1,106 @@
+<h1>React Dark and Light Mode</h1>
+
+<h2>Objective</h2>
+
+<p>To understand how to use the React.js front-end library to switch the style of a webpage from a light theme to a dark theme.</p>
+
+<h2>Learning</h2>
+
+<p>In this lab, we will create a small React application that is able to use a component to switch the style of other components within the page. You will use inline styles, and then optionally understand how to add a <code>.someClassName</code> to react components to use CSS style sheets.</p>
+
+<p>Topics:</p>
+
+<ul>
+<li>React State; <code>useState</code> and <code>setState</code>.</li>
+<li>React Style; <code>style</code> and <code>className</code>props.</li>
+<li>Passing <code>props</code> to child components.</li>
+<li>React and CSS</li>
+</ul>
+
+<h2>Achieving</h2>
+
+<p>Your work will result in:</p>
+
+<ul>
+<li>A website whose styles can be changed by clicking a button.</li>
+</ul>
+
+<h2>Procedure</h2>
+
+<h3>Create the child components</h3>
+
+<ul>
+<li>[ ]  The first thing you need to do is create three new files: <code>Header.jsx</code>, <code>Content.jsx</code>, and <code>Footer.jsx</code>. These will need to contain functional components that have the parameter of <code>props</code>. Reference <code>App.jsx</code> for what you need to set these up.</li>
+<li>[ ]  <code>Header.jsx</code> should contain a <code>&lt;h1&gt;</code> title, and an image.</li>
+<li>[ ]  <code>Content.jsx</code> should contain some <code>&lt;p&gt;</code> components with text.</li>
+<li>[ ]  <code>Footer.jsx</code> should contain the author's name, and the date.</li>
+</ul>
+
+<h3>Place the three child components within the parent App</h3>
+
+<ul>
+<li>[ ]  We will need to import our child components into <code>App.jsx</code>. We will also need to place them in <code>App</code>'s return statement.</li>
+<li>[ ]  In the return statement, these three components will need to be wrapped in a div with a style prop of <code>styleMode</code>.</li>
+</ul>
+
+<h3>Create inline style objects</h3>
+
+<ul>
+<li>[ ]  We wil need two objects, <code>darkMode</code> and <code>lightMode</code> that contain styles within.&nbsp;<code>darkMode</code>&nbsp;should set the background color to black and the font color to white.&nbsp;<code>lightMode</code>&nbsp;should set the background color to white and the font color to black.</li>
+</ul>
+
+<h3>Create the <code>styleMode</code> state</h3>
+
+<ul>
+<li>[ ]  Create a new state variable named <code>styleMode</code> with an initial state of <code>lightMode</code>.</li>
+</ul>
+
+<h3>Add the mode switching button</h3>
+
+<ul>
+<li>[ ]  Add a <code>&lt;button&gt;</code> element above the <code>&lt;Header /&gt;</code> that toggles <code>styleMode</code>'s state.</li>
+<li>[ ]  This button will need an <code>onClick</code> event that sets the current style. The callback function passed to <code>onClick</code> will need to use conditional logic to check <code>styleMode</code> and use <code>setStyleMode()</code> to change it to the opposite of what it currently is.</li>
+</ul>
+
+<h3>Passing props to child components</h3>
+
+<ul>
+<li>[ ]  In <code>&lt;Header /&gt;</code>,<code>&lt;Content /&gt;</code>, <code>&lt;Footer /&gt;</code>, we will need to pass <code>styleMode</code> as a prop to these components.</li>
+</ul>
+
+<p><Example exampleProp = {exampleProp} /></p>
+
+<h3>Using props in our child components</h3>
+
+<ul>
+<li>[ ]  In our three components, we will need a <code>&lt;div&gt;</code> that wraps all the other elements within the return statement. This <code>&lt;div&gt;</code> will have a style prop of <code>props.styleMode</code>.</li>
+</ul>
+
+<h3>Test the button!</h3>
+
+<ul>
+<li>[ ]  When you click your button, the style of the page should toggle between your two style objects.</li>
+</ul>
+
+<h2>Review</h2>
+
+<p>In this lab, we created a <code>styleMode</code> state and passed it as a prop to child components in order to toggle between dark and light mode on our page.</p>
+
+<p>The software should:</p>
+
+<ul>
+<li>Be a website with three different components, <code>&lt;Header /&gt;</code>, <code>&lt;Content /&gt;</code>, <code>&lt;Footer /&gt;</code> rendering on the page.</li>
+<li>Pass a <code>styleMode</code> state as a prop to the the child components.</li>
+<li>Have the style of the child components changed dynamically utilizing <code>props</code>.</li>
+</ul>
+
+<h2>Going Further</h2>
+
+<ul>
+<li><p>How could you leverage a CSS file with existing declarations? Could you apply a CSS <code>class</code> to the JSX components?</p></li>
+<li><p>What would be a downside to applying inline-styles to a React component? Remember that <code>style</code> is a prop, and props in React are immutable. What happens when you change them?</p></li>
+</ul>
+
+<p>Hint: to add a class to a component, use the prop name <code>className</code> instead of the reserved word <code>class</code>. Remember that JSX runs within JavaScript.</p>
+
+<p>[[lab]]</p>
