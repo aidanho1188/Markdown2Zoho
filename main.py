@@ -24,15 +24,22 @@ def read_all_md_file(directory):
             # convert the markdown to html and store it in the dictionary
             # this saves time but function name is not clear
             md_contents["name"] = os.path.basename(md_file) 
-            md_contents["content"] = convert_markdown_to_html( file.read() )
+            md_contents["content"] = convert_markdown_to_html( file.read())
     return md_contents
 
+def write_html_files(directory, content):
+    for file_name, html_content in content.items():
+        base_name = content['name'].split('.')[0]
+        html_file_path = os.path.join(directory, f'{base_name}.html')
+        with open(html_file_path, 'w', encoding='utf-8') as file:
+            file.write(html_content)
 
 
 if __name__ == '__main__':
     print('Hello, World!')
     content = read_all_md_file('test/')
-    send_zoho_request(url, content)
+    write_html_files('test/', content)
+    # send_zoho_request(url, content)
     # testing the content
     for file_name, md_content in content.items():
         print(f'File: {file_name}')
