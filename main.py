@@ -39,7 +39,7 @@ if __name__ == '__main__':
     print('Hello, World!')
     content = read_all_md_file('test/')
     write_html_files('test/', content)
-    # send_zoho_request(url, content)
+    send_zoho_request(url, content)
     # testing the content
     for file_name, md_content in content.items():
         print(f'File: {file_name}')

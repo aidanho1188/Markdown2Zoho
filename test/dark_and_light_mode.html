@@ -1,21 +1,21 @@
-<h1 class="">React Dark and Light Mode</h1>
-<h2 class="">Objective</h2>
-<p class="">To understand how to use the React.js front-end library to switch the style of a webpage from a light theme to a dark theme.</p>
-<h2 class="">Learning</h2>
-<p class="">In this lab, we will create a small React application that is able to use a component to switch the style of other components within the page. You will use inline styles, and then optionally understand how to add a <code>.someClassName</code> to react components to use CSS style sheets.</p>
-<p class="">Topics:</p>
+<h1>React Dark and Light Mode</h1>
+<h2><span class="highlight" style="background-color:#FFD921">Objective</span></h2>
+<p>To understand how to use the React.js front-end library to switch the style of a webpage from a light theme to a dark theme.</p>
+<h2>Learning</h2>
+<p>In this lab, we will create a small React application that is able to use a component to switch the style of other components within the page. You will use inline styles, and then optionally understand how to add a <code>.someClassName</code> to react components to use CSS style sheets.</p>
+<p>Topics:</p>
 <ul>
 <li>React State; <code>useState</code> and <code>setState</code>.</li>
 <li>React Style; <code>style</code> and <code>className</code>props.</li>
 <li>Passing <code>props</code> to child components.</li>
 <li>React and CSS</li>
 </ul>
-<h2 class="">Achieving</h2>
-<p class="">Your work will result in:</p>
+<h2>Achieving</h2>
+<p>Your work will result in:</p>
 <ul>
 <li>A website whose styles can be changed by clicking a button.</li>
 </ul>
-<h2 class="">Procedure</h2>
+<h2>Procedure</h2>
 <h3>Create the child components</h3>
 <ul>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>The first thing you need to do is create three new files: <code>Header.jsx</code>, <code>Content.jsx</code>, and <code>Footer.jsx</code>. These will need to contain functional components that have the parameter of <code>props</code>. Reference <code>App.jsx</code> for what you need to set these up.</li>
@@ -30,7 +30,7 @@
 </ul>
 <h3>Create inline style objects</h3>
 <ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>We wil need two objects, <code>darkMode</code> and <code>lightMode</code> that contain styles within.&amp;nbsp;<code>darkMode</code>&amp;nbsp;should set the background color to black and the font color to white.&amp;nbsp;<code>lightMode</code>&amp;nbsp;should set the background color to white and the font color to black.</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>We wil need two objects, <code>darkMode</code> and <code>lightMode</code> that contain styles within. <code>darkMode</code> should set the background color to black and the font color to white. <code>lightMode</code> should set the background color to white and the font color to black.</li>
 </ul>
 <h3>Create the <code>styleMode</code> state</h3>
 <ul>
@@ -45,7 +45,7 @@
 <ul>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>In <code>&lt;Header /&gt;</code>,<code>&lt;Content /&gt;</code>, <code>&lt;Footer /&gt;</code>, we will need to pass <code>styleMode</code> as a prop to these components.</li>
 </ul>
-<p class="">&lt;Example exampleProp = {exampleProp} /&gt;</p>
+<p>&lt;Example exampleProp = {exampleProp} /&gt;</p>
 <h3>Using props in our child components</h3>
 <ul>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>In our three components, we will need a <code>&lt;div&gt;</code> that wraps all the other elements within the return statement. This <code>&lt;div&gt;</code> will have a style prop of <code>props.styleMode</code>.</li>
@@ -54,20 +54,20 @@
 <ul>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>When you click your button, the style of the page should toggle between your two style objects.</li>
 </ul>
-<h2 class="">Review</h2>
-<p class="">In this lab, we created a <code>styleMode</code> state and passed it as a prop to child components in order to toggle between dark and light mode on our page.</p>
-<p class="">The software should:</p>
+<h2>Review</h2>
+<p>In this lab, we created a <code>styleMode</code> state and passed it as a prop to child components in order to toggle between dark and light mode on our page.</p>
+<p>The software should:</p>
 <ul>
 <li>Be a website with three different components, <code>&lt;Header /&gt;</code>, <code>&lt;Content /&gt;</code>, <code>&lt;Footer /&gt;</code> rendering on the page.</li>
 <li>Pass a <code>styleMode</code> state as a prop to the the child components.</li>
 <li>Have the style of the child components changed dynamically utilizing <code>props</code>.</li>
 </ul>
-<h2 class="">Going Further</h2>
+<h2>Going Further</h2>
 <ul>
-<li><p class="">How could you leverage a CSS file with existing declarations? Could you apply a CSS <code>class</code> to the JSX components?</p>
+<li><p>How could you leverage a CSS file with existing declarations? Could you apply a CSS <code>class</code> to the JSX components?</p>
 </li>
-<li><p class="">What would be a downside to applying inline-styles to a React component? Remember that <code>style</code> is a prop, and props in React are immutable. What happens when you change them?</p>
+<li><p>What would be a downside to applying inline-styles to a React component? Remember that <code>style</code> is a prop, and props in React are immutable. What happens when you change them?</p>
 </li>
 </ul>
-<p class="">Hint: to add a class to a component, use the prop name <code>className</code> instead of the reserved word <code>class</code>. Remember that JSX runs within JavaScript.</p>
-<p class="">[[lab]]</p>
+<p>Hint: to add a class to a component, use the prop name <code>className</code> instead of the reserved word <code>class</code>. Remember that JSX runs within JavaScript.</p>
+<p>[[lab]]</p>

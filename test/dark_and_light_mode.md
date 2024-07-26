@@ -1,6 +1,6 @@
 # React Dark and Light Mode 
 
-## Objective
+## ==Objective==
 
 To understand how to use the React.js front-end library to switch the style of a webpage from a light theme to a dark theme.
 
