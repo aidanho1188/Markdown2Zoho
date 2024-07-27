@@ -17,42 +17,42 @@
 </ul>
 <h2>Procedure</h2>
 <h3>Create the child components</h3>
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>The first thing you need to do is create three new files: <code>Header.jsx</code>, <code>Content.jsx</code>, and <code>Footer.jsx</code>. These will need to contain functional components that have the parameter of <code>props</code>. Reference <code>App.jsx</code> for what you need to set these up.</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><code>Header.jsx</code> should contain a <code>&lt;h1&gt;</code> title, and an image.</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><code>Content.jsx</code> should contain some <code>&lt;p&gt;</code> components with text.</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><code>Footer.jsx</code> should contain the author's name, and the date.</li>
+<ul class="checklist">
+<li class="checkbox">The first thing you need to do is create three new files: <code>Header.jsx</code>, <code>Content.jsx</code>, and <code>Footer.jsx</code>. These will need to contain functional components that have the parameter of <code>props</code>. Reference <code>App.jsx</code> for what you need to set these up.</li>
+<li class="checkbox"><code>Header.jsx</code> should contain a <code>&lt;h1&gt;</code> title, and an image.</li>
+<li class="checkbox"><code>Content.jsx</code> should contain some <code>&lt;p&gt;</code> components with text.</li>
+<li class="checkbox"><code>Footer.jsx</code> should contain the author's name, and the date.</li>
 </ul>
 <h3>Place the three child components within the parent App</h3>
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>We will need to import our child components into <code>App.jsx</code>. We will also need to place them in <code>App</code>'s return statement.</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>In the return statement, these three components will need to be wrapped in a div with a style prop of <code>styleMode</code>.</li>
+<ul class="checklist">
+<li class="checkbox">We will need to import our child components into <code>App.jsx</code>. We will also need to place them in <code>App</code>'s return statement.</li>
+<li class="checkbox">In the return statement, these three components will need to be wrapped in a div with a style prop of <code>styleMode</code>.</li>
 </ul>
 <h3>Create inline style objects</h3>
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>We wil need two objects, <code>darkMode</code> and <code>lightMode</code> that contain styles within. <code>darkMode</code> should set the background color to black and the font color to white. <code>lightMode</code> should set the background color to white and the font color to black.</li>
+<ul class="checklist">
+<li class="checkbox">We wil need two objects, <code>darkMode</code> and <code>lightMode</code> that contain styles within. <code>darkMode</code> should set the background color to black and the font color to white. <code>lightMode</code> should set the background color to white and the font color to black.</li>
 </ul>
 <h3>Create the <code>styleMode</code> state</h3>
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>Create a new state variable named <code>styleMode</code> with an initial state of <code>lightMode</code>.</li>
+<ul class="checklist">
+<li class="checkbox">Create a new state variable named <code>styleMode</code> with an initial state of <code>lightMode</code>.</li>
 </ul>
 <h3>Add the mode switching button</h3>
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>Add a <code>&lt;button&gt;</code> element above the <code>&lt;Header /&gt;</code> that toggles <code>styleMode</code>'s state.</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>This button will need an <code>onClick</code> event that sets the current style. The callback function passed to <code>onClick</code> will need to use conditional logic to check <code>styleMode</code> and use <code>setStyleMode()</code> to change it to the opposite of what it currently is.</li>
+<ul class="checklist">
+<li class="checkbox">Add a <code>&lt;button&gt;</code> element above the <code>&lt;Header /&gt;</code> that toggles <code>styleMode</code>'s state.</li>
+<li class="checkbox">This button will need an <code>onClick</code> event that sets the current style. The callback function passed to <code>onClick</code> will need to use conditional logic to check <code>styleMode</code> and use <code>setStyleMode()</code> to change it to the opposite of what it currently is.</li>
 </ul>
 <h3>Passing props to child components</h3>
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>In <code>&lt;Header /&gt;</code>,<code>&lt;Content /&gt;</code>, <code>&lt;Footer /&gt;</code>, we will need to pass <code>styleMode</code> as a prop to these components.</li>
+<ul class="checklist">
+<li class="checkbox">In <code>&lt;Header /&gt;</code>,<code>&lt;Content /&gt;</code>, <code>&lt;Footer /&gt;</code>, we will need to pass <code>styleMode</code> as a prop to these components.</li>
 </ul>
 <p>&lt;Example exampleProp = {exampleProp} /&gt;</p>
 <h3>Using props in our child components</h3>
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>In our three components, we will need a <code>&lt;div&gt;</code> that wraps all the other elements within the return statement. This <code>&lt;div&gt;</code> will have a style prop of <code>props.styleMode</code>.</li>
+<ul class="checklist">
+<li class="checkbox">In our three components, we will need a <code>&lt;div&gt;</code> that wraps all the other elements within the return statement. This <code>&lt;div&gt;</code> will have a style prop of <code>props.styleMode</code>.</li>
 </ul>
 <h3>Test the button!</h3>
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>When you click your button, the style of the page should toggle between your two style objects.</li>
+<ul class="checklist">
+<li class="checkbox">When you click your button, the style of the page should toggle between your two style objects.</li>
 </ul>
 <h2>Review</h2>
 <p>In this lab, we created a <code>styleMode</code> state and passed it as a prop to child components in order to toggle between dark and light mode on our page.</p>

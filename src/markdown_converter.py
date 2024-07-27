@@ -1,7 +1,7 @@
+import re
 import mistune
-# from markdown2 import Markdown
+import urllib.parse
 from bs4 import BeautifulSoup
-from mistune.plugins import task_lists
 import re
 
 
@@ -9,7 +9,11 @@ import re
 # Check README.md for guidance on what classes to add
 def convert_markdown_to_html(markdown_content):
   renderer = CustomRender()
-  markdowner = mistune.create_markdown(renderer=renderer, plugins=['mistune.plugins.task_lists.task_lists'])
+  markdowner = mistune.create_markdown(renderer=renderer, plugins=[
+    'speedup', 'strikethrough', 'mark', 'insert', 'superscript',
+    'subscript', 'footnotes', 'table', 'url', 'abbr', 'def_list',
+    'math', 'ruby', 'task_lists', 'spoiler',
+  ])
   # markdowner = Markdown()
   html = markdowner(markdown_content)
   tag_class_dict = {
@@ -27,10 +31,28 @@ def add_classes_to_tags(html_content, tag_class_dict):
     for tag, class_name in tag_class_dict.items():
         for element in soup.find_all(tag):
             element['class'] = element.get('class', []) + [class_name]
+
+    # Add classes to ul and li tags. Remove input tags from beautiful soup object
+    for ul in soup.find_all('ul'):
+      if any('task-list-item' in li.get('class', []) for li in ul.find_all('li')):
+        ul['class'] = ul.get('class', []) + ['checklist']
+        for li in ul.find_all('li'):
+          li['class'] = ['checkbox']
+          input_tag = li.find('input', class_='task-list-item-checkbox')
+          input_tag.decompose()
+
+
     return str(soup)
 
 class CustomRender(mistune.HTMLRenderer):
     def text(self, text):
-    # Detect ==text== and replace with <span class="highlight" style="background-color:#FFD921">text</span>
+        # Detect ==text== and replace with a <span>
         text = re.sub(r'==(.+?)==', r'<span class="highlight" style="background-color:#FFD921">\1</span>', text)
         return text
+    
+    def image(self, alt, url, title=None):
+        # Add a div and class to the image tag
+        return f'<div class="imageWrapper"><img class="notecardImageClass" src="{url}" alt="{alt}"></div>'
+    
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)

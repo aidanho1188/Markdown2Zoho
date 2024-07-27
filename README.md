@@ -79,7 +79,7 @@ The Zoho HTML is a subset of HTML that is supported by Zoho Notebook. The follow
 
 <details>
 <summary>Text color tag</summary>
-
+Obsidian does not support text color, so this is a custom tag.
 ```html
 <span class="colour" style="color:#61D1FF">
   text color
@@ -89,7 +89,7 @@ The Zoho HTML is a subset of HTML that is supported by Zoho Notebook. The follow
 
 <details>
 <summary>Font size tag</summary>
-
+Obsidian does not support font size, so this is a custom tag.
 ```html
 <span class="size" style="font-size: 32px;line-height: 32px">
   Summary
@@ -152,7 +152,7 @@ The Zoho HTML is a subset of HTML that is supported by Zoho Notebook. The follow
 <!-- Need more research! -->
 <!-- max width is editable-->
 <div class="imgWrapperDiv">
-  <img style="max-width: 100%" src="data:image/png;base64,...">
+  <img class="notecardImageClass" style="max-width: 100%" src="data:image/png;base64,...">
 </div>
 ```
 </details>

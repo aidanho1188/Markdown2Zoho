@@ -1,0 +1,70 @@
+<h1>React Holy Grail</h1>
+<h2>Objective</h2>
+<p>Get introduced to React by creating a one-page application.</p>
+<hr/>
+<h2>Learning</h2>
+<p>In this lab, you will recreate the classic <a class="zn-link editor-note-link" href="https://en.wikipedia.org/wiki/Holy_grail_(web_design" title="None">Holy Grail layout</a> ) in React.</p>
+<p>Topics:</p>
+<ul>
+<li>React components</li>
+<li>React JSX</li>
+</ul>
+<hr/>
+<h2>Achieving</h2>
+<p>Your work will result in:</p>
+<ul>
+<li>A page that resembles the Holy Grail layout.</li>
+<li>This page will be comprised of three components: the header, the content, and the footer.</li>
+</ul>
+<hr/>
+<h2>Procedure</h2>
+<h3>Create your components</h3>
+<ul class="checklist">
+<li class="checkbox">Create three new components: Header.jsx, Content.jsx, and Footer.jsx</li>
+<li class="checkbox">In these three new components, set up their boilerplate code. Replace <code>ComponentName</code> with the appropriate name and insert text into the return statement so you know which component is being rendered.</li>
+</ul>
+<pre><code class="language-javascript">function ComponentName() {
+  return (
+    &lt;div&gt;
+      This is the ComponentName component.
+    &lt;/div&gt;
+  );
+}
+export default ComponentName;
+</code></pre>
+<h3>Import your new components into <code>App.jsx</code></h3>
+<ul class="checklist">
+<li class="checkbox">Within the <code>App</code> component, import <code>Header</code>, <code>Content</code>, and <code>Footer</code>.</li>
+</ul>
+<pre><code class="language-javascript">import ComponentName from './ComponentName.jsx'
+</code></pre>
+<ul class="checklist">
+<li class="checkbox">Render your three imported components in the App component's return statement.</li>
+</ul>
+<pre><code class="language-javascript"> return (
+    &lt;main&gt;
+      &lt;ComponentName /&gt;
+    &lt;/main&gt;
+  );
+</code></pre>
+<p><strong>Remember, React renders components in top-down order.</strong></p>
+<h3>Style your components</h3>
+<ul class="checklist">
+<li class="checkbox">Refer to the Base wireframe at the following link: <a class="zn-link editor-note-link" href="https://www.figma.com/file/3LzHE1feUIla6ZfNUKyMhZ/react-holy-grail%3Fnode-id%3D0%253A1" title="None">React Holy Grail</a></li>
+<li class="checkbox">JSX allows for HTML elements to be written in JavaScript. Apply CSS to them in the same way you have previously.</li>
+</ul>
+<hr/>
+<h2>Review</h2>
+<p>In this lab, you will have created your first React application with multiple components.</p>
+<p>The software should:</p>
+<ul>
+<li>Have four total JSX files: App, Header, Content, and Footer.</li>
+<li>Have three of those components (Header, Content, and Footer) rendered on App.</li>
+<li>Match the given wireframe.</li>
+</ul>
+<hr/>
+<h2>Going Further</h2>
+<ul>
+<li>Refer to the Going Further wireframe at the following link: <a class="zn-link editor-note-link" href="https://www.figma.com/file/3LzHE1feUIla6ZfNUKyMhZ/react-holy-grail%3Fnode-id%3D0%253A1" title="None">React Holy Grail</a></li>
+<li>Create one or two more components to serve as ADs on the website. Incorporate timers to have the ad image change periodically.</li>
+</ul>
