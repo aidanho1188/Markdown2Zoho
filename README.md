@@ -1,13 +1,15 @@
 # Markdown2Zoho
 Markdown to Zoho HTML converter to migrate from Obsidian to Zoho Notebook
 
-## Goals
-- Select a Markdown file in a directory 
-- Convert the Markdown file to Zoho HTML
-- Send the HTML to the to Zoho API
+## Goals for v1.0
+- Select all the Markdown files in a directory
+- Convert those Markdown files to Zoho HTMLs
+- Send the HTMLs to the to Zoho API
 
 
 ## Usage
+To run the program, use the following command:
+Note: The path should be the directory containing the md files
 ```bash 
 python main.py <path>
 ```

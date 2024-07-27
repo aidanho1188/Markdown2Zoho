@@ -1,8 +1,6 @@
 import re
 import mistune
-import urllib.parse
 from bs4 import BeautifulSoup
-import re
 
 
 # TODO: Add classes to html tags
