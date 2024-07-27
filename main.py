@@ -1,6 +1,5 @@
 import sys
 import os
-import glob
 sys.path.append('src')
 from markdown_converter import convert_markdown_to_html
 from zoho_sender import send_zoho_request
@@ -26,20 +25,33 @@ def read_all_md_file(directory):
 
 def write_html_files(directory, contents):
     for content in contents:
-        base_name = content['name']
+        base_name = content['name'].split('.')[0]
         html_file_path = os.path.join(directory, f'{base_name}.html')
         with open(html_file_path, 'w', encoding='utf-8') as file:
             file.write(content['content'])
 
 
-if __name__ == '__main__':
+def main(directory):
     print('Hello, World!')
-    contents = read_all_md_file('test/')
+    contents = read_all_md_file(directory)
+
+    if not os.path.isdir(directory):
+        print(f"Error: The directory '{directory}' does not exist.")
+        sys.exit(1)
+    # Uncomment the below line to write the html files to the test directory
     write_html_files('test/', contents)
     for content in contents:
         send_zoho_request(url, content)
-    # testing the content
-    for content in contents:
         print(f'File: {content["name"]}')
         print(content["content"])
         print('---')
+
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: python main.py <directorypath>")
+        sys.exit(1)
+    
+    directory = sys.argv[1]
+    main(directory)

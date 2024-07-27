@@ -8,7 +8,7 @@
 ***
 ## React
 * **purpose** - building interactive user interface with speed
-#### Terms
+## Terms
 * *components*
 * *declarative*
 * *compose* - stick thing together

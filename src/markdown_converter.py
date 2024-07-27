@@ -10,9 +10,7 @@ import re
 def convert_markdown_to_html(markdown_content):
   renderer = CustomRender()
   markdowner = mistune.create_markdown(renderer=renderer, plugins=[
-    'speedup', 'strikethrough', 'mark', 'insert', 'superscript',
-    'subscript', 'footnotes', 'table', 'url', 'abbr', 'def_list',
-    'math', 'ruby', 'task_lists', 'spoiler',
+    'strikethrough', 'footnotes', 'table', 'url', 'task_lists',
   ])
   # markdowner = Markdown()
   html = markdowner(markdown_content)
