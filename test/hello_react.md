@@ -9,7 +9,7 @@ Get introduced to React by creating a one-page application.
 In this lab, you will recreate the classic [Holy Grail layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) in React.
 
 Topics:
-- React components
+- React components  - JSX
 - React JSX
 
 ***

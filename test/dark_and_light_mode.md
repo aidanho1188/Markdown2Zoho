@@ -4,7 +4,7 @@
 
 To understand how to use the React.js front-end library to switch the style of a webpage from a light theme to a dark theme.
 
-## Learning
+## ==Learning==
 
 In this lab, we will create a small React application that is able to use a component to switch the style of other components within the page. You will use inline styles, and then optionally understand how to add a `.someClassName` to react components to use CSS style sheets.
 
