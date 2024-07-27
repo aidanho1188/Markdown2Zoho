@@ -4,8 +4,17 @@ Markdown to Zoho HTML converter to migrate from Obsidian to Zoho Notebook
 ## Goals for v1.0
 - Select all the Markdown files in a directory
 - Convert those Markdown files to Zoho HTMLs
-- Send the HTMLs to the to Zoho API
+- Send the HTMLs to the Zoho API
 
+## Usage
+To run the program, use the following command:
+
+```bash 
+python main.py <path/>
+```
+
+> Note: The path should be the directory containing the md files
+> 
 ## Requirements
 
 To install the required packages, run the following command:
@@ -31,7 +40,7 @@ Once you have your Zoho account and access to Zoho Flow, you're ready to proceed
 To send the Zoho HTML to the Zoho Notebook, you need to create a flow in Zoho Flow. The flow should have the following steps:
 - Webhook to Zoho Notebook Flow
   ![webhook to notebook](image-1.png)
-- Zoho Webhook URL - In Zoho Webhook Setting, select Plain Text as the payload type and copy the Webhook URL and paste it in .env file. 
+- Zoho Webhook URL - In Zoho Webhook Setting, select Plain Text as the payload type and copy the Webhook URL, and paste it into .env file. 
 ```
 ZOHO_WEBHOOK_URL = "your_webhook_url"
 ```
@@ -41,15 +50,6 @@ ZOHO_WEBHOOK_URL = "your_webhook_url"
   ![flow activation](image-2.png)
 
 Upon successful execution of the flow, new notes will appear in your Zoho Notebook.
-
-## Usage
-To run the program, use the following command:
-
-```bash 
-python main.py <path>
-```
-
-> Note: The path should be the directory containing the md files
 
 ## Zoho HTML
 The Zoho HTML is a subset of HTML that is supported by Zoho Notebook. The following is a list of supported HTML tags:
