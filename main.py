@@ -39,14 +39,13 @@ def main(directory):
         print(f"Error: The directory '{directory}' does not exist.")
         sys.exit(1)
     # Uncomment the below line to write the html files to the test directory
-    write_html_files('test/', contents)
+    # write_html_files('test/', contents)
     for content in contents:
-        send_zoho_request(url, content)
-        print(f'File: {content["name"]}')
-        print(content["content"])
-        print('---')
-
-
+        status_code = send_zoho_request(url, content)
+        print(f'Status code for {content["name"]}: {status_code}')
+        # print(f'File: {content["name"]}')
+        # print(content["content"])
+        # print('---')
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
